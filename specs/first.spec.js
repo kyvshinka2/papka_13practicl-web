@@ -22,7 +22,7 @@ describe('observe suvc.ru', async function() {
         expect(title).to.equal('Учебный портал ЮУМК');
     });
 
-    it('should display an error', async function() {
+    it('should display an error', async function(){
         loginInput.sendKeys(testLogin);
         passwordInput.sendKeys(testPassword);
 
@@ -32,9 +32,9 @@ describe('observe suvc.ru', async function() {
         // получаем текст ошибки
         let message = await errorMessage.getText();
 
-        expect(message).to.equal('Неверный логин или пароль, попробуйте заново');
+        expect(message).to.equal('Неверный логин или пароль, попробуйте заново.');
 
         // ожидание браузера 5 секунд
-        await browser.sleep(5 * 1000)
+        await browser.sleep(5 * 1000);
     });
 });

@@ -1,5 +1,3 @@
-const expect = require('chai').expect 
-
 const conf = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['./specs/**/*.spec.js'],
